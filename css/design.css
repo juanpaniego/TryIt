@@ -1,0 +1,520 @@
+
+
+@font-face {
+	font-family: 'Smooch Sans';
+	src: url("smoochsans/smoochsans.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Grids option selected ------------------------------------------------------- */
+
+
+
+/* Mobile First-------------------------------------------------------------------------------------------------------------------*/
+
+/* Smartphone--------------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 479px){
+
+	body{
+	font-family: 'Smooch Sans';
+	overflow-x: hidden;
+	width: 100%;
+	height: 200vh;
+	}
+
+ h1 a{
+ 	text-decoration: none;
+ 	color:  royalblue;
+ }
+
+ h1 a:hover{
+ 	color: lightblue;
+	text-decoration-line:none;
+ }
+
+
+li{
+	text-decoration:none ;
+	font-size: 30px;
+}	
+
+ul{
+	list-style-type:none;
+	text-align: center;
+	text-decoration: underline;
+	text-indent: ;
+}
+
+li a{
+	text-decoration:none ;
+	font-size: 30px;
+	color: black;
+}
+
+a:hover{
+	color: lightblue;
+	text-decoration-line:underline ;
+}
+
+
+nav li a{
+		
+	margin-right: 10px;
+}
+
+header h1{
+	text-align: center;
+	font-size: 100px;
+	color: royalblue;
+}
+
+h1{
+	font-size:  50px;
+}
+h2{
+	font-size: 40px;
+}
+
+
+
+h3{
+	font-size: 30px;
+}
+p{
+	font-size: 30px;
+}
+
+label{
+	font-size: 30px;
+}
+
+/*Classes------------------------------------------------------------------------------------*/
+
+.bold{
+	font-weight: bold;
+}
+
+
+.text-image{
+	color:  black;
+	font-size: 20px;
+	text-align: center ;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}
+
+
+/* Boxes---------------------------------------------------------------------------------------*/
+
+.bordermenu{
+	width: 80%;
+	padding: 30px;
+	margin: 20px;
+	text-align: center;
+	background-color: slategrey;
+	border-style: solid;
+	border-color: royalblue;
+	box-sizing:border-box;
+}
+
+
+.box-image-option-selected{
+	box-sizing:border-box;
+	margin: 10px;
+	border: solid;
+	border-color: royalblue;
+}
+
+.box-map-option{
+	margin-left: 40px;
+	box-sizing:border-box;
+}
+
+
+.box-margin-left{
+	margin-left: 40px;
+
+}
+
+/* Flex----------------------------------------------------------------------------*/
+
+.flex-nav{
+	/*display: flex;
+	flex-direction: row;
+	list-style-type:none;*/
+	margin-left: 20px;
+}
+
+/* Grids main--------------------------------------------------------------------*/
+
+.grid-main{
+	
+	display: grid;
+	grid-template-areas: 
+	"cover-site"
+	"side-menu"
+	"video-site"
+	;
+	grid-template-columns: 100%;
+	grid-template-rows: 2fr 3fr 3fr;
+	grid-column-gap: 5px;
+    grid-row-gap: 5px;
+ 	justify-content: center;
+	}
+
+
+
+header{
+	position: sticky;
+	top: 0px;
+	background-color: white;
+	grid-area: header-site;
+	justify-content: center;
+    align-content: center;
+}
+
+nav{
+	grid-area: side-menu;
+
+}
+
+footer{
+	margin-left: 20px;
+	font-size: 30px;
+	grid-area: footer-site;
+}
+
+.box-one{
+	margin: 20px;
+	background-image: url("https://st3.depositphotos.com/9880800/15095/i/950/depositphotos_150957342-stock-photo-people-having-fun-at-home.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	box-sizing:border-box;
+	grid-area: cover-site;
+
+	align-items: center;
+	justify-content: center;
+	display: row;
+	flex-direction: column;
+
+}
+
+.box-video{
+	grid-area: video-site;
+	margin: 20px;
+	box-sizing:border-box;
+}
+
+/* Grids category--------------------------------------------------------------------*/
+
+.grid-category{
+	height: 200vh;
+	display: grid;
+	grid-template-areas: 
+	"header-category"
+	"options"
+
+	;
+	grid-template-columns: 100%;
+	grid-template-rows: 1fr 10fr;
+	grid-column-gap: 5px;
+    grid-row-gap: 5px;
+	}
+
+	.galeria-flex{
+	display: flex;
+	flex-flow: row wrap;
+	font-size: 30px;
+	align-items: center;
+	align-content: flex-start;
+	justify-content: flex-start;
+	grid-area: options;
+	margin-left: 10px;
+}
+
+
+.box-options{
+	border-color: royalblue;
+	border-style: solid;
+	border-width: 3px;
+	font-size: 15px;
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	margin: 5px;
+	width: 30%;
+	height: 20%;
+
+}
+
+
+
+.box-header-category{
+	grid-area: header-category;
+	font-size: 50px;
+	justify-items: center;
+	margin-left: 10px;
+}
+
+
+}
+
+/* Tablet-------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+/* Desktop-------------------------------------------------------------------------------------------------------------------*/
+
+@media (min-width: 1024px){
+
+ body{
+	font-family: 'Smooch Sans';
+	overflow-x: hidden;
+	width: 100%;
+	height: 100vh;
+}
+
+ h1 a{
+ 	text-decoration: none;
+ 	color:  royalblue;
+ }
+
+ h1 a:hover{
+ 	color: lightblue;
+	text-decoration-line:none;
+ }
+
+
+
+
+li{
+	text-decoration:none ;
+	font-size: 30px;
+}	
+
+ul{
+	list-style-type:square;
+}
+
+li a{
+	text-decoration:none ;
+	font-size: 30px;
+	color: black;
+}
+
+a:hover{
+	color: lightblue;
+	text-decoration-line:underline ;
+}
+
+
+nav li a{
+		
+	margin-right: 10px;
+}
+
+header h1{
+	text-align: center;
+	font-size: 100px;
+	color: royalblue;
+}
+
+h1{
+	font-size:  50px;
+}
+h2{
+	font-size: 40px;
+}
+
+
+
+h3{
+	font-size: 30px;
+}
+p{
+	font-size: 30px;
+}
+
+label{
+	font-size: 30px;
+}
+
+/*Classes------------------------------------------------------------------------------------*/
+
+.bold{
+	font-weight: bold;
+}
+
+
+.text-image{
+	color:  black;
+	font-size: 60px;
+	text-align: center ;
+	font-weight: bold;
+	
+}
+
+
+/* Boxes---------------------------------------------------------------------------------------*/
+
+.bordermenu{
+	width: 240px;
+	padding: 30px;
+	margin: 20px;
+	background-color: slategrey;
+	border-style: solid;
+	border-color: royalblue;
+	box-sizing:border-box;
+}
+
+
+.box-image-option-selected{
+	box-sizing:border-box;
+	margin: 10px;
+	border: solid;
+	border-color: royalblue;
+}
+
+.box-map-option{
+	margin-left: 40px;
+	box-sizing:border-box;
+}
+
+
+.box-margin-left{
+	margin-left: 40px;
+
+}
+
+/* Flex----------------------------------------------------------------------------*/
+
+.flex-nav{
+	display: flex;
+	flex-direction: row;
+	list-style-type:none;
+	margin-left: 20px;
+}
+
+
+
+/* Grids main--------------------------------------------------------------------*/
+
+.grid-main{
+	
+	display: grid;
+	grid-template-areas: 
+	"side-menu cover-site"
+	"video-site video-site"
+	;
+	grid-template-columns: 1fr 5fr;
+	grid-template-rows: 6fr 4fr;
+	grid-column-gap: 5px;
+    grid-row-gap: 5px;
+	}
+
+
+
+header{
+	position: sticky;
+	top: 0px;
+	background-color: white;
+	grid-area: header-site;
+	justify-content: center;
+    align-content: center;
+}
+
+nav{
+	grid-area: side-menu;
+
+}
+
+footer{
+	margin-left: 20px;
+	font-size: 30px;
+	grid-area: footer-site;
+}
+
+.box-one{
+	margin: 20px;
+	border-style:solid;
+	border-color:royalblue;
+	width: 1200px;
+	background-image: url("https://st3.depositphotos.com/9880800/15095/i/950/depositphotos_150957342-stock-photo-people-having-fun-at-home.jpg");
+	background-repeat: no-repeat;
+	background-size:cover;
+	box-sizing:border-box;
+	grid-area: cover-site;
+
+	align-items: center;
+	justify-content: center;
+	display: flex;
+
+
+
+}
+
+.box-video{
+	grid-area: video-site;
+	margin: 20px;
+	box-sizing:border-box;
+}
+
+/* Grids category--------------------------------------------------------------------*/
+
+.grid-category{
+	height: 200vh;
+	display: grid;
+	grid-template-areas: 
+	"side-menu header-category"
+	"side-menu options"
+	;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: 1fr 10fr;
+	grid-column-gap: 5px;
+    grid-row-gap: 5px;
+	}
+
+	.galeria-flex{
+	display: flex;
+	flex-flow: row wrap;
+	font-size: 30px;
+	align-items: center;
+	align-content: flex-start;
+	justify-content: flex-start;
+	grid-area: options;
+}
+
+
+.box-options{
+	border-color: royalblue;
+	border-style: solid;
+	border-width: 3px;
+	font-size: 30px;
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	margin: 2px;
+	width: 25%;
+	height: 20%;
+}
+
+.box-header-category{
+	grid-area: header-category;
+	font-size: 70px;
+	justify-items: center;
+	align-items: center;
+}
+
+}
+
