@@ -37,6 +37,7 @@
  h1 a:hover{
  	color: lightblue;
 	text-decoration-line:none;
+	font-size: 102px;
  }
 
 
@@ -60,7 +61,7 @@ li a{
 
 a:hover{
 	color: lightblue;
-	text-decoration-line:underline ;
+	text-decoration-line:underline;
 }
 
 
@@ -87,9 +88,7 @@ h2{
 h3{
 	font-size: 30px;
 }
-p{
-	font-size: 30px;
-}
+
 
 label{
 	font-size: 30px;
@@ -127,23 +126,6 @@ label{
 }
 
 
-.box-image-option-selected{
-	box-sizing:border-box;
-	margin: 10px;
-	border: solid;
-	border-color: royalblue;
-}
-
-.box-map-option{
-	margin-left: 40px;
-	box-sizing:border-box;
-}
-
-
-.box-margin-left{
-	margin-left: 40px;
-
-}
 
 /* Flex----------------------------------------------------------------------------*/
 
@@ -204,8 +186,7 @@ footer{
 
 	align-items: center;
 	justify-content: center;
-	display: row;
-	flex-direction: column;
+	display: flex;
 
 }
 
@@ -247,13 +228,13 @@ footer{
 	border-color: royalblue;
 	border-style: solid;
 	border-width: 3px;
-	font-size: 15px;
+	font-size: 14px;
 	color: black;
 	text-decoration: none;
 	text-align: center;
 	margin: 5px;
-	width: 30%;
-	height: 20%;
+	width: 110px;
+	height: 120px;
 
 }
 
@@ -266,10 +247,385 @@ footer{
 	margin-left: 10px;
 }
 
+.grid-option-selected{
+	display: grid;
+	grid-template-areas:
+	"image" 
+	"description"
+	"map"
+	;
+	grid-template-columns:100%;
+	grid-template-rows: 3fr 3fr 3fr;
+
+}
+
+.box-image-option-selected{
+	box-sizing:border-box;
+	margin: 10px;
+	margin-left: 20px;
+	grid-area: image;
+
+	
+}
+
+
+.box-map-option{
+	margin-left: 20px;
+	box-sizing:border-box;
+	grid-area: map;
+	padding-top: 30px;
+
+
+
+}
+
+.box-description{
+	font-size: 20px;
+	grid-area: description;
+	padding: 20px;
+	margin: 20px;
+	height: 300px;
+	text-align: justify;
+	background-color: royalblue;
+
+	align-items: center;
+	justify-content: center;
+	display: flex;
+
+}
+
+.join-message{
+	grid-area: message;
+	margin-left: 20px;
+	box-sizing:border-box;
+	width: 100%;
+}
+
+.form-join{
+	grid-area: form;
+	margin-left: 20px;
+	box-sizing:border-box;
+	padding-top: 30px;
+
+}
+
+.box-about-us{
+	margin-left: 20px;
+	height: 400px;
+}
+
+.box-contact-us{
+	margin-left: 20px;
+	width: 50%;
+
+}
+
 
 }
 
 /* Tablet-------------------------------------------------------------------------------------------------------------------*/
+
+@media (min-width: 480px) and (max-width: 1023px){
+
+ body{
+	font-family: 'Smooch Sans';
+	overflow-x: hidden;
+	width: 100%;
+	height: 100vh;
+}
+
+ h1 a{
+ 	text-decoration: none;
+ 	color:  royalblue;
+ }
+
+ h1 a:hover{
+ 	color: lightblue;
+	text-decoration-line:none;
+	font-size: 102px;
+ }
+
+
+
+li{
+	text-decoration:none ;
+	font-size: 30px;
+}	
+
+ul{
+	list-style-type:square;
+}
+
+li a{
+	text-decoration:none ;
+	font-size: 30px;
+	color: black;
+}
+
+a:hover{
+	color: lightblue;
+	text-decoration-line:underline ;
+}
+
+
+nav li a{
+		
+	margin-right: 10px;
+}
+
+header h1{
+	text-align: center;
+	font-size: 100px;
+	color: royalblue;
+}
+
+h1{
+	font-size:  50px;
+}
+h2{
+	font-size: 40px;
+}
+
+
+
+h3{
+	font-size: 30px;
+}
+
+
+label{
+	font-size: 30px;
+}
+
+/*Classes------------------------------------------------------------------------------------*/
+
+.bold{
+	font-weight: bold;
+}
+
+
+.text-image{
+	color:  black;
+	font-size: 40px;
+	text-align: center ;
+	font-weight: bold;
+	
+}
+
+
+/* Boxes---------------------------------------------------------------------------------------*/
+
+.bordermenu{
+	width: 240px;
+	padding: 30px;
+	margin: 20px;
+	background-color: slategrey;
+	border-style: solid;
+	border-color: royalblue;
+	box-sizing:border-box;
+}
+
+
+
+
+
+/* Flex----------------------------------------------------------------------------*/
+
+.flex-nav{
+	display: flex;
+	flex-direction: row;
+	list-style-type:none;
+	margin-left: 20px;
+}
+
+
+
+/* Grids main--------------------------------------------------------------------*/
+
+.grid-main{
+	
+	display: grid;
+	grid-template-areas: 
+	"side-menu cover-site"
+	"video-site video-site"
+	;
+	grid-template-columns: 1fr 5fr;
+	grid-template-rows: 6fr 4fr;
+	grid-column-gap: 5px;
+    grid-row-gap: 5px;
+	}
+
+
+
+header{
+	position: sticky;
+	top: 0px;
+	background-color: white;
+	grid-area: header-site;
+	justify-content: center;
+    align-content: center;
+}
+
+nav{
+	grid-area: side-menu;
+
+}
+
+footer{
+	margin-left: 20px;
+	font-size: 30px;
+	grid-area: footer-site;
+}
+
+.box-one{
+	margin: 20px;
+	border-style:solid;
+	border-color:royalblue;
+	background-image: url("https://st3.depositphotos.com/9880800/15095/i/950/depositphotos_150957342-stock-photo-people-having-fun-at-home.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	box-sizing:border-box;
+	grid-area: cover-site;
+
+	align-items: center;
+	justify-content: center;
+	display: flex;
+
+
+
+}
+
+.box-video{
+	grid-area: video-site;
+	margin: 20px;
+	box-sizing:border-box;
+}
+
+/* Grids category--------------------------------------------------------------------*/
+
+.grid-category{
+	height: 200vh;
+	display: grid;
+	grid-template-areas: 
+	"side-menu header-category"
+	"side-menu options"
+	;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: 1fr 10fr;
+	grid-column-gap: 5px;
+    grid-row-gap: 5px;
+	}
+
+	.galeria-flex{
+	display: flex;
+	flex-flow: row wrap;
+	font-size: 30px;
+	align-items: center;
+	align-content: flex-start;
+	justify-content: flex-start;
+	grid-area: options;
+}
+
+
+.box-options{
+	border-color: royalblue;
+	border-style: solid;
+	border-width: 3px;
+	font-size: 20px;
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	margin: 2px;
+	width: 200px;
+	height: 200px;
+}
+
+.box-header-category{
+	grid-area: header-category;
+	font-size: 70px;
+	justify-items: center;
+	align-items: center;
+}
+
+.grid-option-selected{
+	display: grid;
+	grid-template-areas:
+	"image description"
+	"map map"
+	;
+	grid-template-columns:1fr 1fr;
+	grid-template-rows: 4fr 4fr;
+
+}
+
+.box-image-option-selected{
+	box-sizing:border-box;
+	margin: 10px;
+	margin-left: 20px;
+	grid-area: image;
+	border-style: none;
+	
+}
+
+
+.box-map-option{
+	margin-left: 20px;
+	box-sizing:border-box;
+	grid-area: map;
+	padding-top: 30px;
+	width: 50%;
+
+
+}
+
+.box-description{
+	font-size: 20px;
+	grid-area: description;
+	padding: 20px;
+	margin: 20px;
+	height: 300px;
+	text-align: justify;
+	background-color: royalblue;
+
+	align-items: center;
+	justify-content: center;
+	display: flex;
+
+}
+
+.grid-join-us{
+	display: grid;
+	grid-template-areas: 
+	"message form"
+	;
+	grid-template-columns: 1fr 1fr;
+}
+
+.join-message{
+	grid-area: message;
+	margin-left: 20px;
+	box-sizing:border-box;
+}
+
+.form-join{
+	grid-area: form;
+	margin-left: 20px;
+	box-sizing:border-box;
+	padding-top: 30px;
+}
+
+.box-about-us{
+	margin-left: 20px;
+	height: 400px;
+}
+
+.box-contact-us{
+	margin-left: 20px;
+
+}
+
+}
 
 
 
@@ -293,9 +649,8 @@ footer{
  h1 a:hover{
  	color: lightblue;
 	text-decoration-line:none;
+	font-size: 102px;
  }
-
-
 
 
 li{
@@ -379,23 +734,9 @@ label{
 }
 
 
-.box-image-option-selected{
-	box-sizing:border-box;
-	margin: 10px;
-	border: solid;
-	border-color: royalblue;
-}
-
-.box-map-option{
-	margin-left: 40px;
-	box-sizing:border-box;
-}
 
 
-.box-margin-left{
-	margin-left: 40px;
 
-}
 
 /* Flex----------------------------------------------------------------------------*/
 
@@ -449,10 +790,10 @@ footer{
 	margin: 20px;
 	border-style:solid;
 	border-color:royalblue;
-	width: 1200px;
 	background-image: url("https://st3.depositphotos.com/9880800/15095/i/950/depositphotos_150957342-stock-photo-people-having-fun-at-home.jpg");
 	background-repeat: no-repeat;
-	background-size:cover;
+	background-position: center;
+	background-size: cover;
 	box-sizing:border-box;
 	grid-area: cover-site;
 
@@ -468,6 +809,7 @@ footer{
 	grid-area: video-site;
 	margin: 20px;
 	box-sizing:border-box;
+
 }
 
 /* Grids category--------------------------------------------------------------------*/
@@ -495,7 +837,6 @@ footer{
 	grid-area: options;
 }
 
-
 .box-options{
 	border-color: royalblue;
 	border-style: solid;
@@ -505,8 +846,8 @@ footer{
 	text-decoration: none;
 	text-align: center;
 	margin: 2px;
-	width: 25%;
-	height: 20%;
+	width: 250px;
+	height: 250px;
 }
 
 .box-header-category{
@@ -514,6 +855,82 @@ footer{
 	font-size: 70px;
 	justify-items: center;
 	align-items: center;
+}
+
+
+.grid-option-selected{
+	display: grid;
+	grid-template-areas:
+	"image description"
+	"map map"
+	;
+	grid-template-columns:1fr 1fr;
+	grid-template-rows: 3fr 4fr;
+
+}
+
+.box-image-option-selected{
+	box-sizing:border-box;
+	margin: 10px;
+	margin-left: 20px;
+	grid-area: image;
+	
+}
+
+
+.box-map-option{
+	margin-left: 20px;
+	box-sizing:border-box;
+	grid-area: map;
+	padding-top: 30px;
+
+
+}
+
+.box-description{
+	font-size: 15px;
+	grid-area: description;
+	padding: 20px;
+	margin: 20px;
+	height: 300px;
+	text-align: justify;
+	background-color: royalblue;
+
+	align-items: center;
+	justify-content: center;
+	display: flex;
+
+}
+
+.grid-join-us{
+	display: grid;
+	grid-template-areas: 
+	"message form"
+	;
+	grid-template-columns: 1fr 1fr;
+}
+
+.join-message{
+	grid-area: message;
+	margin-left: 20px;
+	box-sizing:border-box;
+}
+
+.form-join{
+	grid-area: form;
+	margin-left: 20px;
+	box-sizing:border-box;
+	padding-top: 30px;
+}
+
+.box-about-us{
+	margin-left: 20px;
+	height: 400px;
+}
+
+.box-contact-us{
+	margin-left: 20px;
+
 }
 
 }
