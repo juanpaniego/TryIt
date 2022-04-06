@@ -500,6 +500,7 @@ footer{
 	grid-area: video-site;
 	margin: 20px;
 	box-sizing:border-box;
+	width: 50%;
 }
 
 /* Grids category--------------------------------------------------------------------*/
@@ -727,10 +728,10 @@ label{
 	width: 240px;
 	padding: 30px;
 	margin: 20px;
-	background-color: slategrey;
-	border-style: solid;
-	border-color: royalblue;
+	
 	box-sizing:border-box;
+	background: linear-gradient(to left,royalblue, slategrey);
+	
 }
 
 
@@ -809,6 +810,7 @@ footer{
 	grid-area: video-site;
 	margin: 20px;
 	box-sizing:border-box;
+	width: 50%;
 
 }
 
@@ -883,6 +885,7 @@ footer{
 	box-sizing:border-box;
 	grid-area: map;
 	padding-top: 30px;
+	width: 60%;
 
 
 }
